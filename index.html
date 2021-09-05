@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>View</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+	<div id="app">
+		<div class="jumbotron shadow-sm p-3">
+		      <img
+		        v-bind:src="picture" v-bind:alt="`${firstName} ${lastName}`" v-bind:class="gender"
+		      />
+		      <dl>
+		      	<dd>{{firstName}} {{lastName}} <i v-bind:class="`fa fa-${gender}`"></i></dd>
+		      	<dd>{{email}}</dd>
+		      </dl>
+		      <button v-on:click="getUser()" v-bind:class="gender" >Get Random User</button>
+		</div>
+    </div>
+	<script src="https://unpkg.com/vue@3.0.5"></script>
+	<script src="app.js"></script>
+</body>
+</html>
